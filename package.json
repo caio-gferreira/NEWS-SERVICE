@@ -6,6 +6,7 @@
   "scripts": {
     "test": "npx jest && npx jest --coverage",
     "start": "sucrase-node ./src/index.ts",
+    "test-and-push": "npm run test && git push",
     "build": "tsc -w"
   },
   "keywords": [],
