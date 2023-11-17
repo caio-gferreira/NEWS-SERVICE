@@ -3,15 +3,12 @@ import { Application, Request, Response, Express } from 'express';
 export declare interface INews {
     text: string;
     title: string;
-    image: string;
-    autor: string;
-    link: string;
-    publicationDate: string;
 }
 
 export declare interface INewsController {
-    get(id: string): Promise<INews>;
-    getAll(qtd: number, page?: number): Promise<INews[]>
+    async createNews(valueNews: INews): Promise<INews | undefined>;
+    async get(id: string): Promise<INews | undefined>;
+    async getAll(qtd?: number, page?:number): Promise<INews[] | undefined>;
 }
 
 export declare interface INewsApplication {
